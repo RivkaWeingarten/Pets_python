@@ -2,7 +2,7 @@ from flask import (Blueprint, render_template)
 import json
 
 pets = json.load(open('pets.json'))
-print(pets)
+# print(pets)
 bp = Blueprint('pet', __name__, url_prefix="/pets")
 
 
@@ -15,7 +15,7 @@ def info(pet_id):
     pet=pets[pet_id-1]
     return render_template('pet.html', pet=pet)
 
-@bp.route('facts/new/<int:pet_id>')
-def facts(pet_id):
-    pet=pets[pet_id-1]
-    return render_template('pet_form.html', pet=pet)
+# @bp.route('facts/new/<int:pet_id>')
+# def facts(pet_id):
+#     pet=pets[pet_id-1]
+#     return render_template('pet_form.html', pet=pet)

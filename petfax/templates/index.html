@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Document</title>
+    <title>PETS</title>
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
 </head>
 <body>
     <h1>Welcome to Rivka's Petfax</h1>
-
+<div id="container">
     {% for pet in pets %}
+    <div class="item">
         <h2>{{ pet.pet_name }}</h2>
         <img src="{{ pet.pet_photo }}" alt="Photo of pet"/>
         <a href="/pets/{{pet.pet_id}}">View Details </a>
+    </div>
     {% endfor %}
+   </div>
 </body>
 </html>
