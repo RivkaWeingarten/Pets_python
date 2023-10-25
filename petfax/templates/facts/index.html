@@ -6,6 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Funfacts!</h1>
+    <div class ="container">
+    <h1>User Facts!</h1>
+    {% for fact in facts %}
+        <h4> submitted by {{fact.submitter}} </h4>
+        {{fact.fact}}
+    {% endfor %}
+</div>
 </body>
 </html>
